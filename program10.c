@@ -1,14 +1,32 @@
 #include<stdio.h>
-int main()
+int isprime(int n)
 {
-    int upper_limit,lower_limit,prime=1,i;
-    printf("ENTER THE LOWER RANGE:");
-    scanf("%d",&lower_limit);
-    printf("ENTER THE UPPER RANGE :");
-    scanf("%d",&upper_limit);
-    
-    for(i=lower_limit;i<=upper_limit;i++)
+    int i;
+    for(i=2;i<=n/2;i++)
     {
-           
+        if (n%i==0)
+        {
+            return 0;
+        }
+       
     }
+     return 1;
+}
+int main()
+ 
+{
+     int n1,n2,i;
+    printf("ENTER THE LOWER LIMIT :");
+    scanf("%d",&n1);
+    printf("ENTER THE UPPER LIMIT :");
+    scanf("%d",&n2);
+    for(i=n1;i<n2;i++)
+    {
+        if(isprime(i))
+        {
+               printf("%d  ",i);
+        }
+    }
+return 0;
+
 }
